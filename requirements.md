@@ -34,7 +34,30 @@ Assumptions:
 
 Features:
 
-Users will be able to get hints and enter a duck code to mark as found. They can make friends with each other on the site, recieve small on-site rewards for their duck-finds, and can help each other out.
+
+*Log in*
+
+Prompt to log in or sign up. There will be a duck logo.
+
+*Main Page* 
+
+Recent posts and the top 3 leaderboard will be on the main page. There will also be a prompt to either make a post or mark a duck as found.
+
+*Top Banner* 
+
+Includes a Duck Cache logo and all of the different pages on the site, as well as a logout page.
+
+*Hints Page* 
+
+Users will be able to get hints to duck locations on this page. Hints will be hidden by default and users have to click to see it.
+
+*Friends* 
+
+They can make friends with each other on the site and pull up a menu to see a full list.
+
+*Rewards*
+
+There will be a page where users can see their accumulated rewards for finding ducks and compare their rewards/badges with their added friends and the top users.
 
 Non-functional requirements:
 
