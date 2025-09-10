@@ -4,7 +4,7 @@ Geo Caching Ducks
 
 Buisness Context:
 
-There will be posts and hints for scattered ducks in various locations for users to treasure hunt for around the Utah Tech Campus. There will be a leaderboard and incentives for the users who are the quickest and find the most ducks.
+Goal is to find tindy ducks scattered through out the Smiths building. There will be posts and hints for scattered duck in various locations for users to treasure hunt for around the Smiths building. There will be a leaderboard and incentives for the users who are the quickest and find the most ducks.
 
 Problem Statement:
 
@@ -15,10 +15,16 @@ Scope:
 *in scope* 
 
 Users should be able to guess where the ducks are located using a code system.
+Theres a leaderboard that shows the person with the most found ducks.
+For each hint you use, first one is free, you get less points when you find the duck.
+You can post when you find the duck with a picture.
 
 *out of scope*
 
 Users cannot post their own locations yet. Users cannot be from outside Utah Tech.
+Adding teams replaces adding friends.
+Tutors would check on each duck in order to maintain them and assure they're there.
+Ducks missing or lost will be removed.
 
 Assumptions:
 
