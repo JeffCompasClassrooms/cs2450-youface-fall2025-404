@@ -1,6 +1,6 @@
 Project Name: 
 
-Geo Caching Ducks
+Ducks Caching Geo
 
 Buisness Context:
 
