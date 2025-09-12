@@ -37,7 +37,7 @@ Features:
 
 *Log in*
 
-Prompt to log in or sign up. There will be a duck logo.
+Prompt to log in or sign up. There will be a duck logo at the top.
 
 *Main Page* 
 
