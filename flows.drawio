@@ -1,0 +1,228 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram name="Page-1" id="no7sMWZ0IroEb9cLd63S">
+    <mxGraphModel dx="3065" dy="1510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-15" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;&quot;&gt;star&lt;/font&gt;t&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-16" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="240" as="sourcePoint" />
+            <mxPoint x="210" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-17" value="user navigates to&amp;nbsp;&lt;div&gt;hints page&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;gradientColor=#d5739d;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-18" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="239.5" as="sourcePoint" />
+            <mxPoint x="570" y="239.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-19" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="280" as="sourcePoint" />
+            <mxPoint x="770" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-20" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;no&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="510" y="140" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-21" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="200" as="sourcePoint" />
+            <mxPoint x="450" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="160" />
+              <mxPoint x="450" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-22" value="hint unlocks, deducts hint tokens by 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="710" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-23" value="login" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-24" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-20" y="244.47000000000003" as="sourcePoint" />
+            <mxPoint x="30" y="244.47000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-25" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;yes&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="761" y="320" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-26" value="display all available duck location hints (they&#39;re blurred)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;strokeColor=#996185;gradientColor=#d5739d;" vertex="1" parent="1">
+          <mxGeometry x="400" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-27" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="239.57" as="sourcePoint" />
+            <mxPoint x="380" y="239.57" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-28" value="click to view a hint" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="570" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-29" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-30" value="prompt: go to findable duck page?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-31" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;no&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="440" y="400" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-32" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="701" y="399.16999999999996" as="sourcePoint" />
+            <mxPoint x="621" y="399.16999999999996" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-33" value="launch unfound ducks page and display leaderboard" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="501" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-34" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-30" target="stlhFTR_ZvYQrXSJAAmz-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="460" as="sourcePoint" />
+            <mxPoint x="560" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-35" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;yes&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="541" y="440" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-36" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Flow Diagram: Duck Hint Page&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;-Ally&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-37" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-53" target="stlhFTR_ZvYQrXSJAAmz-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-38" value="Login" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="540" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-39" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-42" target="stlhFTR_ZvYQrXSJAAmz-43">
+          <mxGeometry y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-42" target="stlhFTR_ZvYQrXSJAAmz-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-41" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Yes&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="stlhFTR_ZvYQrXSJAAmz-40">
+          <mxGeometry x="-0.4333" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-42" value="Click on duck finding tab" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="720" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-43" value="Let them scroll on the social media page" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="750" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-44" value="Yes" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-47" target="stlhFTR_ZvYQrXSJAAmz-49">
+          <mxGeometry x="0.3333" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-47" target="stlhFTR_ZvYQrXSJAAmz-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="990" />
+              <mxPoint x="80" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-46" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="stlhFTR_ZvYQrXSJAAmz-45">
+          <mxGeometry x="0.2217" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-47" value="Click on duck&amp;nbsp;&lt;div&gt;to find&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="940" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-49" target="stlhFTR_ZvYQrXSJAAmz-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-49" value="Display ducks location, and hint" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="1100" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-51" target="stlhFTR_ZvYQrXSJAAmz-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-51" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="460" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-52" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-38" target="stlhFTR_ZvYQrXSJAAmz-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="580" as="sourcePoint" />
+            <mxPoint y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-53" value="Get brought to Social Media Page" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-55" target="stlhFTR_ZvYQrXSJAAmz-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-55" value="Display a list of all findable ducks" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="860" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-60" target="stlhFTR_ZvYQrXSJAAmz-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="1120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="1240" />
+              <mxPoint x="80" y="1125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-57" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="stlhFTR_ZvYQrXSJAAmz-56">
+          <mxGeometry x="0.0863" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-60" target="stlhFTR_ZvYQrXSJAAmz-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="1240" />
+              <mxPoint x="250" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-59" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="stlhFTR_ZvYQrXSJAAmz-58">
+          <mxGeometry x="-0.7577" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-60" value="Found duck?&lt;div&gt;(Type in code)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="1190" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="stlhFTR_ZvYQrXSJAAmz-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="669.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-62" value="Award player points and check off duck" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="550" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-63" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="670" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="stlhFTR_ZvYQrXSJAAmz-64" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Flow Diagram: Finding Ducks&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;-Anthony&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="340" width="190" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
