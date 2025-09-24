@@ -1,0 +1,3 @@
+selenium
+requests
+flask>=2.0
