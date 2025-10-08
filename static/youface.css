@@ -10,3 +10,9 @@
         }
     }
 }
+.bg-primary {
+    background-color: #2a2732 !important;
+}
+#duck{
+    width: 50px;
+}
