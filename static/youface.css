@@ -16,3 +16,15 @@
 #duck{
     width: 50px;
 }
+.mr-auto{
+    margin-right:0 !important;
+}
+nav .navbar-collapse{
+    flex-grow: 0;
+}
+nav{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar .container, .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl{
+    justify-content: space-between;
+}
