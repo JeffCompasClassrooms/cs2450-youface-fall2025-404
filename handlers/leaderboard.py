@@ -12,7 +12,7 @@ def get_leaderboard():
         {'name': 'User4', 'score': 75}
         
     ]
-    sort = sorted(scores, key=lambda item: item['score'])
+    sort = sorted(scores, key=lambda item: item['score'], reverse=True)
     return sort[:3]
     
     #return flask.render_template('index.html', title='Leaderboard', leaderboard=leaderboard)
