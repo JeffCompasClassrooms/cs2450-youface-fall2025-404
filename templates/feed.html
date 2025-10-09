@@ -4,8 +4,30 @@
 <div class="row justify-content-md-center mb-4">
   <h1 class="">Welcome, {{username}}!</h1>
 </div>
+<div class="blackbg">
+  <h2 class="mt-4">Leaderboard</h2>
+  <table >
+    <thead">
+      <tr>
+        <th>Rank</th>
+        <th>User</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in leaderboard %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.score }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
 
 <div class="row justify-content-md-center">
+  
 
   <div class="col col-lg-8">
     <div class="card bg-light mb-3">

@@ -45,3 +45,18 @@ body{
     color:rgb(27, 214, 152);
     font-family:Menlo,Cascadia Code,SF Mono,Consolas, MS-DOS;
 }
+.row{
+    margin-top: 2em;
+}
+.blackbg{
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+td,th{
+    color:rgb(27, 214, 152);
+}
