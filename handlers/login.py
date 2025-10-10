@@ -1,6 +1,6 @@
 import flask
 
-from handlers import copy
+from handlers import copy, leaderboard
 from db import posts, users, helpers
 
 blueprint = flask.Blueprint("login", __name__)
@@ -87,7 +87,8 @@ def index():
         all_posts += posts.get_posts(db, friend)
     # sort posts
     sorted_posts = sorted(all_posts, key=lambda post: post['time'], reverse=True)
-
+    ldb = leaderboard.get_leaderboard()
     return flask.render_template('feed.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friends=friends, posts=sorted_posts)
+            friends=friends, posts=sorted_posts, leaderboard=ldb
+    )

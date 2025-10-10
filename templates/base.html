@@ -13,7 +13,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
           <div>
-            <a href="#" class="pull-left"><img id="duck" src="{{ url_for('static', filename='ducklogo.png') }}"></a> 
+            <a href="/" class="pull-left"><img id="duck" src="{{ url_for('static', filename='ducklogo.png') }}"></a> 
             <a class="navbar-brand" href="/">{{ title }}</a>
 
           </div>
@@ -48,13 +48,15 @@
         </div>
       </nav>
 
-      <div class="jumbotron">
+
+      <!-- <div class="jumbotron">
         <div class="container">
           <h1><a href="/">{{title}}</a></h1>
           <p class="lead">{{subtitle}}</p>
         </div>
-      </div>
+      </div> -->
 
+  
       <div class="container">
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}

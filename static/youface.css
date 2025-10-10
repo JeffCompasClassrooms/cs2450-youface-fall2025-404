@@ -45,3 +45,57 @@ body{
     color:rgb(27, 214, 152);
     font-family:Menlo,Cascadia Code,SF Mono,Consolas, MS-DOS;
 }
+.row{
+    margin-top: 2em;
+}
+.blackbg{
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 20px;
+    border-radius: 50px;
+    
+}
+.leaderboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.leaderboard-header{
+
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.leaderboard h3{
+    font-weight: 900;
+}
+.leaders{
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    
+    flex-direction: row;
+    
+}
+.leaderboard h2{
+    margin-bottom: 20px;
+}
+.no1 {
+    color:rgb(72, 185, 255);
+    background-color: rgba(0, 0, 0, 0.66);
+}
+.no2{
+    color:rgb(255, 133, 72);
+}
+.no3{
+    color:rgb(237, 255, 72);
+}
+.score{
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.66);
+    margin-left: 10px;
+}
+.fill{
+    margin-left: 10px;
+    height: 30px;
+}
