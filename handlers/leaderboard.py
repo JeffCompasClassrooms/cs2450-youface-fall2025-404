@@ -6,10 +6,10 @@ blueprint = flask.Blueprint('leaderboard',__name__)
 @blueprint.route('/leaderboard')
 def get_leaderboard():
     scores=[
-        {'name': 'User1', 'score': 120},
-        {'name': 'User2', 'score': 95},
-        {'name': 'User3', 'score': 80},
-        {'name': 'User4', 'score': 75}
+        {'name': 'User1', 'score': 120, 'bar':int(120/120*100)},
+        {'name': 'User2', 'score': 95, 'bar':int(95/120*100)},
+        {'name': 'User3', 'score': 80, 'bar':int(80/120*100)},
+        {'name': 'User4', 'score': 75, 'bar':int(75/120*100)}
         
     ]
     sort = sorted(scores, key=lambda item: item['score'], reverse=True)

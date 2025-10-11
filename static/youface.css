@@ -10,12 +10,12 @@
             padding: 0.5em;
         }
     }
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(25, 25, 26);
     color: rgb(27, 214, 152);
     font-family:Menlo,Cascadia Code,SF Mono,Consolas, MS-DOS;
 }
 .bg-primary {
-    background-color: #1e1c27 !important;
+    background-color: #14141a !important;
 }
 #duck{
     width: 50px;
@@ -25,6 +25,7 @@
 }
 nav .navbar-collapse{
     flex-grow: 0;
+    
 }
 .navbar-brand,.navbar-dark{
     color:rgb(27, 214, 152) !important;
@@ -40,18 +41,20 @@ nav .navbar-collapse{
     color:white;
 }
 body{
-    background: rgb(49, 46, 65);
-    /* background-image: linear-gradient(180deg,rgba(82, 76, 97, 1), rgba(25, 23, 38, 1)); */
+    background: rgb(44, 43, 52);
+    
     color:rgb(27, 214, 152);
     font-family:Menlo,Cascadia Code,SF Mono,Consolas, MS-DOS;
 }
 .row{
     margin-top: 2em;
 }
-.blackbg{
-    background-color: rgba(0, 0, 0, 0.66);
-    padding: 20px;
+.blackbg,.bg-light{
+    background-color: rgba(0, 0, 0, 0.66) !important;
+    padding: 18px;
     border-radius: 50px;
+    margin-bottom: 10px;
+    border-color: rgb(27, 214, 152);
     
 }
 .leaderboard{
@@ -71,7 +74,7 @@ body{
 }
 .leaders{
     display: flex;
-    width: 70%;
+    width: 80%;
     justify-content: flex-end;
     
     flex-direction: row;
@@ -82,7 +85,6 @@ body{
 }
 .no1 {
     color:rgb(72, 185, 255);
-    background-color: rgba(0, 0, 0, 0.66);
 }
 .no2{
     color:rgb(255, 133, 72);
@@ -95,7 +97,23 @@ body{
     background-color: rgba(0, 0, 0, 0.66);
     margin-left: 10px;
 }
-.fill{
-    margin-left: 10px;
+.fill1{
     height: 30px;
+    background-color:rgb(72, 185, 255);
+    margin-left: 10px;
+}
+.fill2{
+    height: 30px;
+    background-color:rgb(255, 133, 72);
+    margin-left: 10px;
+}
+.fill3{
+    height: 30px;
+    background-color:rgb(237, 255, 72);
+    margin-left: 10px;
+}
+@media (max-width:1000px ){
+    .leaders{
+        width:90%;
+    }
 }

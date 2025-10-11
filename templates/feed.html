@@ -11,26 +11,27 @@
           <h3>User</h3>
           <h3>Score</h3>
         </div> -->
-        {% for user in leaderboard %}
+        {% for u in leaderboard %}
         <div
-        {% if loop.index == 1 %}
-          class="leaders no1"
-        {% elif loop.index == 2 %}
-          class="leaders no2"
-        {% elif loop.index == 3 %}
-          class="leaders no3"
-        {% endif %}>
-          <h4>{{ user.name }}</h4>
-          <div class="fill"
-                style="width: {{(user.score / leaderboard[0].score) * 100 }}%;
-                 {% if loop.index == 1 %}background: rgb(72, 185, 255)
-                 {% elif loop.index == 2 %}background: rgb(255, 133, 72);
-                 {% elif loop.index == 3 %}background: rgb(237, 255, 72);
-                 {% else %}background: #4da6ff;
-                 {% endif %}">
+          {% if loop.index == 1 %}
+            class="leaders no1"
+          {% elif loop.index == 2 %}
+            class="leaders no2"
+          {% elif loop.index == 3 %}
+            class="leaders no3"
+          {% endif %}>
+          <h4>{{ u.name }}</h4>
+          {% if loop.index == 1 %}
+          <div class="fill1" style="width: {{ u.bar -10}}%"></div>
+          {% elif loop.index == 2 %}
+          <div class="fill2" style="width: {{ u.bar -10}}%"></div>
+          {% elif loop.index == 3 %}
+          <div class="fill3" style="width: {{ u.bar -10}}%"></div>
+          {%else%}
+            <h4>No Scores Yet!</h4>
+          {% endif %}
+          <h4 class="score">{{ u.score }}</h4>
         </div>
-          <h4 class="score">{{ user.score }}</h4>
-  </div>
         {% endfor %}
 
   </div>
