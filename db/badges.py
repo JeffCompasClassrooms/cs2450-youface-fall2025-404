@@ -14,5 +14,5 @@ def load_db_badges():
 
 
 def lockedbadges(db, name, value, description, requirements):
-
+    pass
 
