@@ -17,3 +17,4 @@ def found_duck(username, code):
     duck = db.search(ducks.code == code)
     if duck.name not in user['ducks']:
         user.ducks.append(duck.code)
+        #when duck found make sure to run addbadgetouser() from badges.py to add a badge to the user

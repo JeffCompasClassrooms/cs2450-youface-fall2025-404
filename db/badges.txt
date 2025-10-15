@@ -1,2 +1,2 @@
-100 points badge, 100, A badge given to you once you reached your first 100 points., Reach 100 Points
-Login for the first time, 10, Earn the login badge by logingin for the first time., Login
+01, 100 points badge, 100, A badge given to you once you reached your first 100 points., Reach 100 Points, ./badgeimages/duckimage1
+02, Login for the first time, 10, Earn the login badge by logingin for the first time., Login, ./badgeimages/duckimage2
