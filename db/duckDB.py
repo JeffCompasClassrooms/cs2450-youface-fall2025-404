@@ -16,4 +16,4 @@ def found_duck(username, code):
     ducks = db.Query()
     duck = db.search(ducks.code == code)
     if duck.name not in user['ducks']:
-        pass
+        user.ducks.append(duck.code)
