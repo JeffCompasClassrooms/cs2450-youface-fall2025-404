@@ -16,5 +16,6 @@ def found_duck(username, code):
     ducks = db.Query()
     duck = db.search(ducks.code == code)
     if duck.name not in user['ducks']:
-        user.ducks.append(duck.name)
+        user.ducks.append(duck.code)
         users.points = user.points + duck.value
+         #when duck found make sure to run addbadgetouser() from badges.py to add a badge to the user
