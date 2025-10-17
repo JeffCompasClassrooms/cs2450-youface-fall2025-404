@@ -112,6 +112,18 @@ body{
     background-color:rgb(237, 255, 72);
     margin-left: 10px;
 }
+.round_edge{
+    border-radius: 40px;
+    text-align: center;
+    height: 50px !important;
+}
+.alert{ 
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 50px;
+    border-color: rgb(27, 214, 152);
+    color:rgb(27, 214, 152);
+    text-align: center;
+}
 @media (max-width:1000px ){
     .leaders{
         width:90%;
