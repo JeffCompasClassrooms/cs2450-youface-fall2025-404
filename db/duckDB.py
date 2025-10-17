@@ -22,15 +22,11 @@ def found_duck(username, code):
     result = db.search(Duck.code == int(code))
     
     if not result:
-        print(user['ducks'])
-        print(user['points'])
         return "Invalid code."
     duck = result[0]
     if duck['name'] not in user['ducks']:
         user['ducks'].append(duck['name'])
         user['points'] += duck['value']
-        print(user['ducks'])
-        print(user['points'])
         User = tinydb.Query()
         users.update({'ducks': user['ducks'], 'points': user['points']}, User.username == username)
         return '{} found!'.format(duck['name'])
