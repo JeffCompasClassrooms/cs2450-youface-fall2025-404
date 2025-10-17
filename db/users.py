@@ -1,4 +1,4 @@
-import tinydb
+import tinydb, badges
 
 def new_user(db, username, password):
     users = db.table('users')
@@ -61,3 +61,11 @@ def get_user_friends(db, user):
     for friend in user['friends']:
         friends.append(users.get(User.username == friend))
     return friends
+
+def getbadges(db): # db passed here should be userbadges.json
+    badges = db.all()
+    badgeslist = []
+    for badge in badges:
+        badgeslist.append(badge)
+    return badgeslist
+        
