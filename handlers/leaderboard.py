@@ -5,13 +5,15 @@ from db import posts, users, helpers
 blueprint = flask.Blueprint('leaderboard',__name__)
 @blueprint.route('/leaderboard')
 def get_leaderboard():
-    scores=[
-        {'name': 'User1', 'score': 120, 'bar':int(120/120*100)},
-        {'name': 'User2', 'score': 95, 'bar':int(95/120*100)},
-        {'name': 'User3', 'score': 80, 'bar':int(80/120*100)},
-        {'name': 'User4', 'score': 75, 'bar':int(75/120*100)}
-        
-    ]
+    scores = []
+    db = helpers.load_db()
+    users = db.table('users')
+    all = users.all()
+    for user in all:
+        points = user.get('points', 0)
+        name = user.get('username', 'Unknown')
+        scores.append({'name': name, 'score': points})
+    
     sort = sorted(scores, key=lambda item: item['score'], reverse=True)
     return sort[:3]
     

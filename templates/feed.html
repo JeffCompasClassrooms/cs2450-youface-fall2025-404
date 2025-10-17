@@ -22,11 +22,11 @@
           {% endif %}>
           <h4>{{ u.name }}</h4>
           {% if loop.index == 1 %}
-          <div class="fill1" style="width: {{ u.bar -10}}%"></div>
+          <div class="fill1" style="width: {{ (u.score/leaderboard[0]['score']*100) -10}}%"></div>
           {% elif loop.index == 2 %}
-          <div class="fill2" style="width: {{ u.bar -10}}%"></div>
+          <div class="fill2" style="width: {{ (u.score/leaderboard[0]['score']*100) -10}}%"></div>
           {% elif loop.index == 3 %}
-          <div class="fill3" style="width: {{ u.bar -10}}%"></div>
+          <div class="fill3" style="width: {{(u.score/leaderboard[0]['score']*100) -10}}%"></div>
           {%else%}
             <h4>No Scores Yet!</h4>
           {% endif %}
@@ -40,7 +40,7 @@
 <div class="row justify-content-md-center">
   
 
-  <div class="col col-lg-8">
+  <!-- <div class="col col-lg-8">
     <div class="card bg-light mb-3">
       <div class="card-body">
         <h3 class="card-title">New Post</h3>
@@ -49,6 +49,18 @@
             <textarea class="form-control" name="post" rows="3" placeholder="What's on your mind?"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" name="post-submit">Submit</button>
+        </form>
+      </div>
+    </div> -->
+    <div class="col col-lg-8">
+    <div class="card bg-light mb-3">
+      <div class="card-body">
+        <h3 class="card-title">Enter Code:</h3>
+        <form method="post" action="/enter">
+          <div class="form-group">
+            <textarea class="form-control round_edge" name="code" rows="3" placeholder="Ex: 12345"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" name="post-submit">Enter</button>
         </form>
       </div>
     </div>
