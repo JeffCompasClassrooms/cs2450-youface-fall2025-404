@@ -6,9 +6,6 @@ def add_duck(db, name, value, code):
 
 def load_ducks():
    db = tinydb.TinyDB("ducks.json")
-   if(len(db)== 0):
-        add_duck(db, "Duck1", 100, 12345)#temp, just to have one duck
-   
    return db
 
 def found_duck(username, code):
