@@ -98,18 +98,18 @@ body{
     margin-left: 10px;
 }
 .fill1{
-    height: 30px;
-    background-color:rgb(72, 185, 255);
+    height: 25px;
+    background-color:rgb(0, 182, 219);
     margin-left: 10px;
 }
 .fill2{
-    height: 30px;
-    background-color:rgb(255, 133, 72);
+    height: 25px;
+    background-color:rgb(225, 100, 37);
     margin-left: 10px;
 }
 .fill3{
-    height: 30px;
-    background-color:rgb(237, 255, 72);
+    height: 25px;
+    background-color:rgb(250, 225, 35);
     margin-left: 10px;
 }
 .round_edge{
