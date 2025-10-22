@@ -98,19 +98,31 @@ body{
     margin-left: 10px;
 }
 .fill1{
-    height: 30px;
-    background-color:rgb(72, 185, 255);
+    height: 25px;
+    background-color:rgb(0, 182, 219);
     margin-left: 10px;
 }
 .fill2{
-    height: 30px;
-    background-color:rgb(255, 133, 72);
+    height: 25px;
+    background-color:rgb(225, 100, 37);
     margin-left: 10px;
 }
 .fill3{
-    height: 30px;
-    background-color:rgb(237, 255, 72);
+    height: 25px;
+    background-color:rgb(250, 225, 35);
     margin-left: 10px;
+}
+.round_edge{
+    border-radius: 40px;
+    text-align: center;
+    height: 50px !important;
+}
+.alert{ 
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 50px;
+    border-color: rgb(27, 214, 152);
+    color:rgb(27, 214, 152);
+    text-align: center;
 }
 @media (max-width:1000px ){
     .leaders{

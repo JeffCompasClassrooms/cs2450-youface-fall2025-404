@@ -1,6 +1,6 @@
 import flask
 
-from db import posts, users, helpers
+from db import posts, users, helpers, duckDB
 
 blueprint = flask.Blueprint("posts", __name__)
 
@@ -21,3 +21,12 @@ def post():
     posts.add_post(db, user, post)
 
     return flask.redirect(flask.url_for('login.index'))
+@blueprint.route('/enter', methods=['POST'])
+def code_entered():
+    code = flask.request.form.get('code')
+    username = flask.request.cookies.get('username')
+    msg = duckDB.found_duck(username, code)
+    flask.flash(msg.format(username))
+    return flask.redirect(flask.url_for('login.index'))
+    
+
