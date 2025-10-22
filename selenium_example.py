@@ -9,14 +9,14 @@ options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
 # Don't specify chromedriver path!
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(options=options) # this selects chrome as the browser for selenium test
 
 try:
-    driver.get("http://localhost:3000/loginscreen")
+    driver.get("http://localhost:3000/loginscreen") # attempt to access the login screen of our website, this is the port
     time.sleep(2)
 
     print("--= Beginning Tests =--")
-    login_button = driver.find_element(By.CSS_SELECTOR, "input[type='submit'][value='Login']")
+    login_button = driver.find_element(By.CSS_SELECTOR, "input[type='submit'][value='Login']") # finds input called that has the type of submit and text of login
     copy = driver.find_element(By.CSS_SELECTOR, "p[class='lead']").text
 
     if copy == "A billion dollars and it's yours!":
