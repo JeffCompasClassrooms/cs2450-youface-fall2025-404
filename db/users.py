@@ -1,4 +1,5 @@
-import tinydb, badges
+import tinydb
+# import badges
 
 def new_user(db, username, password):
     users = db.table('users')
