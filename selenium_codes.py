@@ -17,7 +17,8 @@ driver = webdriver.Chrome(options=options)
 try:
     driver.get("http://localhost:5005/loginscreen")
     time.sleep(2)
-    
+    ran = 0
+    passed = 0
     #be on test user U:test PW:test
     print("--= Beginning Duck Code Tests =--")
 
@@ -34,13 +35,19 @@ try:
     time.sleep(2)
     if(driver.current_url == "http://localhost:5005/"):
         print("[PASSED] - Logged in.")
+        ran += 1
+        passed += 1
     else:
         print("[Failed] - Log in failed")
+        ran += 1
     user= driver.find_element(By.CSS_SELECTOR, "h1[id='welcome']").text
     if user == 'Welcome, test!':
         print("[PASSED] - Correct user.")
+        ran += 1
+        passed +=1
     else:
         print("[FAILED] - Incorrect user. Username was: ", str(user))
+        ran += 1
 
 
 
@@ -62,24 +69,38 @@ try:
     leader = driver.find_element(By.CSS_SELECTOR, "div.leaders.no1 h4").text
     if(leader != ''):
         print("[PASSED] - Leaderboard exists.")
+        ran += 1
+        passed +=1
     else:
         print("[FAILED] - No leaderboard data found.")
+        ran += 1
     top_score = driver.find_element(By.CSS_SELECTOR, "div.leaders.no1 h4[class='score']").text
     if(top_score != ''):
         print("[PASSED] - Scores display.")
+        ran += 1
+        passed +=1 
     else:
         print("[FAILED] - No scores found.")
+        ran += 1
+
     
     if(leader == leaders[0]['name']):
         print("[PASSED] - Correct user in #1 spot.")
+        ran += 1
+        passed +=1 
     else:
         print("[FAILED] - Incorrect user in #1 spot.")
+        ran += 1
+
     if(int(top_score) == leaders[0]['score']):
         print("[PASSED] - Correct score in #1 spot.")
+        ran += 1
+        passed +=1 
     else:
         print("[FAILED] - Incorrect score in #1 spot.")
         print(top_score)
         print(leaders[0]['score'])
+        ran += 1
 
 
    
@@ -92,6 +113,8 @@ try:
      #enter a code
     enter_code = driver.find_element(By.CSS_SELECTOR, "textarea[name = 'code']")
     print("[PASSED] - Enter code element exists.")
+    ran += 1
+    passed +=1 
     enter_code.send_keys('12345')
     user = users.get(User.username == 'test')
     old_score = user['points']
@@ -102,12 +125,18 @@ try:
     new_score = user['points']
     if(new_score == old_score + 100):
         print('[PASSED] - User score updated correctly.')
+        passed +=1 
+        ran += 1
     else:
         print('[FAILED] - User score updated incorrectly.')
+        ran += 1
     if('Duck1' in user['ducks']):
         print('[PASSED] - Duck was added to test user.')
+        passed +=1 
+        ran += 1
     else:
         print('[FAILED] - Duck failed to add to test user.')
+        ran += 1
 
 
     #same process but without deleting duck to ensure more points don't get added
@@ -122,11 +151,16 @@ try:
     new_score = user['points']
     if(new_score == old_score):
         print('[PASSED] - User score did not add if duck was already found.')
+        ran += 1
+        passed +=1 
     else:
         print('[FAILED] - User score added score even if the duck was found prior.')
+        ran += 1
 except NoSuchElementException:
     print('[FAILED] - Enter code is missing 1 or more elements')
+    ran += 1
 
 finally:
     print("--= Ending Tests =--")
+    print(str(ran) + " tests ran. " + str(passed) + ' tests passed.')
     driver.quit()
