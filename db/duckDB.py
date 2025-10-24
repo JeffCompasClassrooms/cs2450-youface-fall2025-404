@@ -19,13 +19,13 @@ def found_duck(username, code):
     result = db.search(Duck.code == int(code))
     
     if not result:
-        return "Invalid code."
+        return "Invalid code.",duck['name'], users.get(User.username == username)
     duck = result[0]
     if duck['name'] not in user['ducks']:
         user['ducks'].append(duck['name'])
         user['points'] += duck['value']
         User = tinydb.Query()
         users.update({'ducks': user['ducks'], 'points': user['points']}, User.username == username)
-        return '{} found!'.format(duck['name'])
-    return "You have {} already.".format(duck['name'])
+        return '{} found!'.format(duck['name']), duck['name'], users.get(User.username == username)
+    return "You have {} already.".format(duck['name']), duck['name'], users.get(User.username == username)
          #when duck found make sure to run addbadgetouser() from badges.py to add a badge to the user
