@@ -124,6 +124,18 @@ body{
     color:rgb(27, 214, 152);
     text-align: center;
 }
+.friendscore{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(27, 214, 152, 0.834);
+    border-radius: 20px;
+    padding: 10px;
+    color:black;
+}
+.friendscore h3{
+    font-weight: bold;
+}
 @media (max-width:1000px ){
     .leaders{
         width:90%;

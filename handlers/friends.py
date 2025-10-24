@@ -2,7 +2,7 @@ import flask
 
 from handlers import copy
 from db import posts, users, helpers
-
+from flask import flash
 blueprint = flask.Blueprint("friends", __name__)
 
 @blueprint.route('/addfriend', methods=['POST'])
@@ -63,8 +63,9 @@ def view_friend(fname):
 
     friend = users.get_user_by_name(db, fname)
     all_posts = posts.get_posts(db, friend)[::-1] # reverse order
+    
 
     return flask.render_template('friend.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friend=friend['username'],
+            friend=friend['username'],points = friend['points'],
             friends=users.get_user_friends(db, user), posts=all_posts)
