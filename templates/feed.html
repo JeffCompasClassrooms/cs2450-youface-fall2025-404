@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row justify-content-md-center mb-4">
+<div class="row justify-content-md-center mb-4 home">
   <h1 class="welcome" id="welcome">Welcome, {{username}}!</h1>
+  {%if points == "No points earned yet."%}
+      <h2 class="points">You don't have any points. Go find some ducks!</h2>
+  {%else%}
+      <h2 class="points">You have {{points}} points</h2>
+  {%endif%}
+
 </div>
 <div class="blackbg">
   <div class="leaderboard">

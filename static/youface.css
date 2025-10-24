@@ -57,11 +57,17 @@ body{
     border-color: rgb(27, 214, 152);
     
 }
-.leaderboard{
+.leaderboard, .home{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
+}
+.points{
+    color:rgb(110, 170, 255);
+    font-weight: bold;
+    
 }
 .leaderboard-header{
 
@@ -141,6 +147,8 @@ body{
     margin-top: 20px;
     width: 90%;
     justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
 
 }
 .frienddiv{
@@ -155,9 +163,10 @@ body{
 .frienddiv input{
     border-radius: 20px;
 }
-.frienddiv li, a{
+.frienddiv li, .frienddiv a{
     color:rgb(27, 214, 152);
     text-decoration: none;
+    font-size: large;
 }
 .frienddiv ul{
     list-style-type:decimal;
@@ -165,6 +174,7 @@ body{
 .center{
     text-align: center;
 }
+
 @media (max-width:1000px ){
     .leaders{
         width:90%;

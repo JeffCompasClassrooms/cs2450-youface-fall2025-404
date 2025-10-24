@@ -27,7 +27,7 @@ def addfriend():
     msg, category = users.add_user_friend(db, user, name)
 
     flask.flash(msg, category)
-    return flask.redirect(flask.url_for('login.index'))
+    return flask.redirect(flask.url_for('friends_page'))
 
 @blueprint.route('/unfriend', methods=['POST'])
 def unfriend():
@@ -64,16 +64,16 @@ def view_friend(fname):
     friend = users.get_user_by_name(db, fname)
     all_posts = posts.get_posts(db, friend)[::-1] # reverse order
     
+    points = users.get_points(friend)
 
     return flask.render_template('friend.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friend=friend['username'],points = friend['points'],
-            friends=users.get_user_friends(db, user), posts=all_posts)
+            friend=friend['username'],
+            friends=users.get_user_friends(db, user), posts=all_posts, points = points)
 @blueprint.route('/friends')
 def friends_page():
-    """Serves the main feed page for the user."""
+    """Serves the friends page for the user."""
     db = helpers.load_db()
-
     # make sure the user is logged in
     username = flask.request.cookies.get('username')
     password = flask.request.cookies.get('password')

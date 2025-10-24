@@ -22,6 +22,16 @@
             <ul>
                 {% for friend in friends %}
                 <li><a href="/friend/{{ friend.username }}">{{ friend.username }}</a></li>
+                {%if 'points' in friend %}
+                    {%if(friend['points'] != '' and friend['points'] != 0 )%}
+                        <p class="points">Total Score: {{friend.points}}</p>
+                    {%else%}
+                        <p class="points">Total Score: No points earned yet.</p>
+                    {%endif%}
+                {%else%}
+                    <p class="points">Total Score: No points earned yet.</p>
+                {%endif%}
+
                 {% endfor %}
             </ul>
             {% else %}
