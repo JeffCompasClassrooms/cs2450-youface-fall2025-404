@@ -162,6 +162,9 @@ body{
 .frienddiv ul{
     list-style-type:decimal;
 }
+.center{
+    text-align: center;
+}
 @media (max-width:1000px ){
     .leaders{
         width:90%;
