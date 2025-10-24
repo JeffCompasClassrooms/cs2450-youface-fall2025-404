@@ -1,6 +1,6 @@
 import flask
 
-from handlers import copy
+from handlers import copy, leaderboard
 from db import posts, users, helpers
 from flask import flash
 blueprint = flask.Blueprint("friends", __name__)
@@ -69,3 +69,30 @@ def view_friend(fname):
             subtitle=copy.subtitle, user=user, username=username,
             friend=friend['username'],points = friend['points'],
             friends=users.get_user_friends(db, user), posts=all_posts)
+@blueprint.route('/friends')
+def friends_page():
+    """Serves the main feed page for the user."""
+    db = helpers.load_db()
+
+    # make sure the user is logged in
+    username = flask.request.cookies.get('username')
+    password = flask.request.cookies.get('password')
+    # if username is None and password is None:
+    #     return flask.redirect(flask.url_for('login.loginscreen'))
+    user = users.get_user(db, username, password)
+    # if not user:
+    #     flask.flash('Invalid credentials. Please try again.', 'danger')
+    #     return flask.redirect(flask.url_for('login.loginscreen'))
+
+    # get the info for the user's feed
+    friends = users.get_user_friends(db, user)
+    all_posts = []
+    for friend in friends + [user]:
+        all_posts += posts.get_posts(db, friend)
+    # sort posts
+    sorted_posts = sorted(all_posts, key=lambda post: post['time'], reverse=True)
+    ldb = leaderboard.get_leaderboard()
+    return flask.render_template('friends.html', title=copy.title,
+            subtitle=copy.subtitle, user=user, username=username,
+            friends=friends, posts=sorted_posts, leaderboard=ldb
+    )

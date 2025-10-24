@@ -136,6 +136,32 @@ body{
 .friendscore h3{
     font-weight: bold;
 }
+.friends{
+    display: flex;
+    margin-top: 20px;
+    width: 90%;
+    justify-content: center;
+
+}
+.frienddiv{
+    background-color: rgba(0, 0, 0, 0.66) !important;
+    padding: 18px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    border-width: 10px;
+    border-color: rgb(27, 214, 152);
+    padding: 50px;
+}
+.frienddiv input{
+    border-radius: 20px;
+}
+.frienddiv li, a{
+    color:rgb(27, 214, 152);
+    text-decoration: none;
+}
+.frienddiv ul{
+    list-style-type:decimal;
+}
 @media (max-width:1000px ){
     .leaders{
         width:90%;
