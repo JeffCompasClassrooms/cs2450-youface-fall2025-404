@@ -110,5 +110,6 @@ def index():
 
     return flask.render_template('feed.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friends=friends, posts=sorted_posts, leaderboard=ldb, points= points
+            friends=friends, posts=sorted_posts, leaderboard=ldb, points= points,
+            top_score = top_score
     )

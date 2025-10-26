@@ -22,11 +22,11 @@
       %} class="leaders no3" {% endif %}>
       <h4>{{ u.name }}</h4>
       {% if loop.index == 1 %}
-      <div class="fill1" style="width: {{ (u.score/points*100) -10}}%"></div>
+      <div class="fill1" style="width: {{ (u.score/top_score*100) -10}}%"></div>
       {% elif loop.index == 2 %}
-      <div class="fill2" style="width: {{ (u.score/points*100) -10}}%"></div>
+      <div class="fill2" style="width: {{ (u.score/top_score*100) -10}}%"></div>
       {% elif loop.index == 3 %}
-      <div class="fill3" style="width: {{(u.score/points*100) -10}}%"></div>
+      <div class="fill3" style="width: {{(u.score/top_score*100) -10}}%"></div>
       {%else%}
       <h4>No Scores Yet!</h4>
       {% endif %}

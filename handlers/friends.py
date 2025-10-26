@@ -27,7 +27,7 @@ def addfriend():
     msg, category = users.add_user_friend(db, user, name)
 
     flask.flash(msg, category)
-    return flask.redirect(flask.url_for('friends_page'))
+    return flask.redirect(flask.url_for('friends.friends_page'))
 
 @blueprint.route('/unfriend', methods=['POST'])
 def unfriend():
