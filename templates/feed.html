@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row justify-content-md-center mb-4">
-  <h1 class="">Welcome, {{username}}!</h1>
+  <h1 class="welcome" id="welcome">Welcome, {{username}}!</h1>
 </div>
 
 <div class="blackbg">
@@ -55,7 +55,7 @@
           <div class="form-group">
             <textarea class="form-control round_edge" name="code" rows="3" placeholder="Ex: 12345"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" name="post-submit">Enter</button>
+          <button type="submit" id='enter' class="btn btn-primary" name="post-submit">Enter</button>
         </form>
       </div>
     </div>
