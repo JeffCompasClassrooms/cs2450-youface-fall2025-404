@@ -85,6 +85,7 @@ def index():
     all_posts = []
     for friend in friends + [user]:
         all_posts += posts.get_posts(db, friend)
+    points = users.get_points(user)
     # sort posts
     sorted_posts = sorted(all_posts, key=lambda post: post['time'], reverse=True)
     ldb = leaderboard.get_leaderboard()
@@ -98,5 +99,5 @@ def index():
 
     return flask.render_template('feed.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friends=friends, posts=sorted_posts, leaderboard=ldb, top_score=top_score
+            friends=friends, posts=sorted_posts, leaderboard=ldb, points= points
     )

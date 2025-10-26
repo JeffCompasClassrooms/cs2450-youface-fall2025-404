@@ -70,4 +70,14 @@ def getbadges(db): # db passed here should be userbadges.json
     for badge in badges:
         badgeslist.append(badge)
     return badgeslist
-        
+
+def get_points(user):
+    if 'points' in user:
+        if(user['points'] != '' and user['points'] != 0 ):
+            points = user['points']
+            print(user['points'])
+        else:
+            points = "No points earned yet."
+    else:
+            points = "No points earned yet."
+    return points

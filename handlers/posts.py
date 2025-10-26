@@ -25,8 +25,12 @@ def post():
 def code_entered():
     code = flask.request.form.get('code')
     username = flask.request.cookies.get('username')
-    msg = duckDB.found_duck(username, code)
+    msg, duckname, user = duckDB.found_duck(username, code)
     flask.flash(msg.format(username))
+    db = helpers.load_db()
+    if('found' in msg):
+        postmsg = (username + " found " + duckname + '!')
+        posts.add_post(db, user, postmsg)
     return flask.redirect(flask.url_for('login.index'))
     
 
