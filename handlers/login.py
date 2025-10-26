@@ -85,7 +85,18 @@ def index():
     all_posts = []
     for friend in friends + [user]:
         all_posts += posts.get_posts(db, friend)
-    points = users.get_points(user)
+###Prevent division by zero###
+    raw_points = users.get_points(user)
+# Make sure points is an integer
+    try:
+        points = int(raw_points)
+    except Exception:
+        points = 0
+
+    # Prevent division by zero
+    if points < 1:
+        points = 1
+###Prevent division by zero###
     # sort posts
     sorted_posts = sorted(all_posts, key=lambda post: post['time'], reverse=True)
     ldb = leaderboard.get_leaderboard()

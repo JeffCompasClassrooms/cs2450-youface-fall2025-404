@@ -3,11 +3,10 @@
 {% block content %}
 <div class="row justify-content-md-center mb-4 home">
   <h1 class="welcome" id="welcome">Welcome, {{username}}!</h1>
-  {%if points == "No points earned yet."%}
-      <h2 class="points">You don't have any points. Go find some ducks!</h2>
-  {%else%}
-      <h2 class="points">You have {{points}} points</h2>
-  {%endif%}
+  {% if points <= 1 %} <h2 class="points">You don't have any points. Go find some ducks!</h2>
+    {%else%}
+    <h2 class="points">You have {{points}} points</h2>
+    {%endif%}
 
 </div>
 
@@ -23,11 +22,11 @@
       %} class="leaders no3" {% endif %}>
       <h4>{{ u.name }}</h4>
       {% if loop.index == 1 %}
-      <div class="fill1" style="width: {{ (u.score/top_score*100) -10}}%"></div>
+      <div class="fill1" style="width: {{ (u.score/points*100) -10}}%"></div>
       {% elif loop.index == 2 %}
-      <div class="fill2" style="width: {{ (u.score/top_score*100) -10}}%"></div>
+      <div class="fill2" style="width: {{ (u.score/points*100) -10}}%"></div>
       {% elif loop.index == 3 %}
-      <div class="fill3" style="width: {{(u.score/top_score*100) -10}}%"></div>
+      <div class="fill3" style="width: {{(u.score/points*100) -10}}%"></div>
       {%else%}
       <h4>No Scores Yet!</h4>
       {% endif %}
@@ -108,4 +107,4 @@
       </div>
     </div>
   </div> -->
-{% endblock %}
+  {% endblock %}
