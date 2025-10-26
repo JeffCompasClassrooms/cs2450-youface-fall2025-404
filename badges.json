@@ -1,1 +1,1 @@
-{"_default": {"1": {"id": "01", "name": "100 points badge", "value": "100", "description": "A badge given to you once you reached your first 100 points.", "requirement": "Reach 100 Points", "image": "./badgeimages/duckimage1"}, "2": {"id": "02", "name": "Login for the first time", "value": "10", "description": "Earn the login badge by logingin for the first time.", "requirement": "Login", "image": "./badgeimages/duckimage2"}}}
+{"_default": {}}
