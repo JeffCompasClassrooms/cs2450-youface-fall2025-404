@@ -1,4 +1,5 @@
 import tinydb
+db = "./badges.py"
 # import badges
 
 def new_user(db, username, password):

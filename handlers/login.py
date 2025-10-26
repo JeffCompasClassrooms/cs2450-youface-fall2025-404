@@ -89,6 +89,14 @@ def index():
     # sort posts
     sorted_posts = sorted(all_posts, key=lambda post: post['time'], reverse=True)
     ldb = leaderboard.get_leaderboard()
+
+    #prevent zero division error
+    # calculate top_score to avoid division by zero
+    top_score = 1  # default value if empty or top score is zero
+    if ldb and ldb[0].get('score', 0) != 0:
+        top_score = ldb[0]['score']
+    
+
     return flask.render_template('feed.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
             friends=friends, posts=sorted_posts, leaderboard=ldb, points= points
