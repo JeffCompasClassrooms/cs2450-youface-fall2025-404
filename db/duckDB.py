@@ -1,5 +1,5 @@
 import tinydb
-from . import users, helpers
+from . import users, helpers, badges
 def add_duck(db, name, value, code):
     db.insert({"name":name, "value":value, "code": code})
 
@@ -8,8 +8,11 @@ def load_ducks():
    return db
 
 def found_duck(username, code):
+    if(code == ''):
+        return "Invalid code.",'none', users.get(User.username == username)
     user_db = helpers.load_db()
-    
+    bdg = badges.load_badges()
+    print(bdg.all())
     users = user_db.table('users')
     User = tinydb.Query()
     user = users.get(User.username == username)
