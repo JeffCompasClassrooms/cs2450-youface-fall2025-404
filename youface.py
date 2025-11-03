@@ -7,7 +7,7 @@ import timeago
 import tinydb
 
 # handlers
-from handlers import friends, login, posts, leaderboard
+from handlers import friends, login, posts, leaderboard, badges
 from db import users
 app = flask.Flask(__name__)
 
@@ -20,6 +20,8 @@ app.register_blueprint(friends.blueprint)
 app.register_blueprint(login.blueprint)
 app.register_blueprint(posts.blueprint)
 app.register_blueprint(leaderboard.blueprint)
+app.register_blueprint(badges.blueprint)
+
 
 app.secret_key = 'mygroup'
 app.config['SESSION_TYPE'] = 'filesystem'
