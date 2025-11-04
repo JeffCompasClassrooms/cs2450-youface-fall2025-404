@@ -26,6 +26,7 @@ def add_badge_to_user(user, users):
                 user['badges'].append(badge['name'])
                 User = tinydb.Query()
                 users.update({'badges': user['badges']}, User.username == user['username'])
+                print(user)
 def is_point_badge(value):
     try:
         val = int(value)
@@ -34,6 +35,21 @@ def is_point_badge(value):
         return True
     except ValueError:
         return False #not an int
+def is_duck_count_badge(value):
+    try:
+        val = int(value)
+        if val < 100:
+            return True #is duck count badge
+        return False
+    except ValueError:
+        return False #not an int
+def get_badge_png_by_name(name):
+    db = load_badges()
+    Badge = tinydb.Query()
+    badge=  db.search(Badge.name == name)
+    return badge[0].get('image', 'base_duck.png')
+
+    
 # def load_db_badges(): # this needs to run first before anything else is ever done.
 #     badgesdb.truncate() # this wipes the json file, which is needed since it stores data even after the run ends
 #     with open("/root/cs2450-youface-fall2025-404/db/badges.txt","r") as badges:

@@ -108,6 +108,9 @@ def index():
         top_score = ldb[0]['score']
     
 
+    #get top badge, if none display default
+    print(ldb)
+
     return flask.render_template('feed.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
             friends=friends, posts=sorted_posts, leaderboard=ldb, points= points,

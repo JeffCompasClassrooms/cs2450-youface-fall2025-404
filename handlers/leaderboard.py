@@ -1,6 +1,6 @@
 import flask
-
-from db import posts, users, helpers
+import tinydb
+from db import posts, users, helpers, badges
 
 blueprint = flask.Blueprint('leaderboard',__name__)
 @blueprint.route('/leaderboard')
@@ -12,9 +12,21 @@ def get_leaderboard():
     for user in all:
         points = user.get('points', 0)
         name = user.get('username', 'Unknown')
-        scores.append({'name': name, 'score': points})
+        badge = get_user_badge(user)
+        if not badge:
+            top_badge = "base_duck.png"
+        else:
+            top_badge = badges.get_badge_png_by_name(badge[-1])
+        scores.append({'name': name, 'score': points, "badge": top_badge})
     
+
     sort = sorted(scores, key=lambda item: item['score'], reverse=True)
     return sort[:3]
-    
-    #return flask.render_template('index.html', title='Leaderboard', leaderboard=leaderboard)
+
+
+
+def get_user_badge(user):
+    badge_db = badges.load_badges()
+    all_badges = user.get('badges', [])
+    return all_badges
+   

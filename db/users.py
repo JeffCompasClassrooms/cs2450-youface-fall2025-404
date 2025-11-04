@@ -1,6 +1,6 @@
 import tinydb
-db = "./badges.py"
-# import badges
+from handlers import leaderboard
+from db import badges
 
 def new_user(db, username, password):
     users = db.table('users')
@@ -81,3 +81,11 @@ def get_points(user):
     else:
             points = "No points earned yet."
     return points
+
+def get_top_badge(user):
+    badge = leaderboard.get_user_badge(user)
+    if not badge:
+        top_badge = "base_duck.png"
+    else:
+        top_badge = badges.get_badge_png_by_name(badge[-1])
+    return top_badge
