@@ -15,17 +15,12 @@ options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 ran = 0
 passed = 0
-capabilities = {
-    "browserName": "chrome",
-    "platformName": "ANY"
-}
 
 SELENIUM_REMOTE_URL = os.getenv("SELENIUM_REMOTE_URL", "http://localhost:4444/wd/hub")
 
 driver = webdriver.Remote(
     command_executor=SELENIUM_REMOTE_URL,
-    options=options,
-    desired_capabilities=capabilities
+    options=options
 )
 try:
     driver.get("http://localhost:5005/loginscreen")
