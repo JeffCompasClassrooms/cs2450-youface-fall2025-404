@@ -30,6 +30,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install selenium
+          pip install tinydb
 
       - name: Start Flask app in background
         run: |
