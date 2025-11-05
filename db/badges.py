@@ -1,4 +1,4 @@
-import tinydb
+import tinydb, users
 # we'll have badges earned through points, actions, and ducks found
 
 #### World Variables ####
@@ -34,13 +34,14 @@ def addbadgetouser(id):
     badgeQ = tinydb.Query()
     badge = badgesdb.search(badgeQ.id == id) # locates badge based off of id, returns list with badge(dictionary)
     if badge: # if b has something in  it (True) it means it's a real badge, if so check if it user already has it
-        duplicate = userbadgesdb.search(tinydb.Query().id == id) # this sets duplicate to a badge, if the badge were trying to find is already in the user badges
+        user_entry = userbadgesdb.table(username)  # each user has their own table
+        duplicate = user_entry.search(tinydb.Query().id == id) # this sets duplicate to a badge, if the badge were trying to find is already in the user badges
         if duplicate: # if duplicate has something, don't add
             print("duplicate badge attempted to be added, rejected badge")
         else: # if duplicate is empty, it means the id was not found in userbadges so add this since it's a new badge
-            id, name, value, description, requirement, image = badge[0].values() # badge is a list of a dictionary, so get first item and values only
-            appendbadges(userbadgesdb, id, name, value, description, requirement, image)
-            print(userbadgesdb.all())
+            badge_data = badge[0].values() # badge is a list of a dictionary, so get first item and values only
+            user_entry.insert(badge_data)
+            print(f"Added {badge_data['name']} to {username}'s badges.")
     else: 
         print(f"badge not found in badges.txt")
 
