@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 import time, tinydb
 from db import helpers
 from handlers import leaderboard
-
+import os
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
@@ -15,6 +15,12 @@ options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 ran = 0
 passed = 0
+SELENIUM_REMOTE_URL = os.getenv("SELENIUM_REMOTE_URL", "http://localhost:4444/wd/hub")
+
+driver = webdriver.Remote(
+    command_executor=SELENIUM_REMOTE_URL,
+    options=options
+)
 try:
     driver.get("http://localhost:5005/loginscreen")
     time.sleep(2)
