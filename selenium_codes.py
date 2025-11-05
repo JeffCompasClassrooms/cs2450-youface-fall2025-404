@@ -16,14 +16,8 @@ driver = webdriver.Chrome(options=options)
 ran = 0
 passed = 0
 
-SELENIUM_REMOTE_URL = os.getenv("SELENIUM_REMOTE_URL", "http://localhost:4444/wd/hub")
-
-driver = webdriver.Remote(
-    command_executor=SELENIUM_REMOTE_URL,
-    options=options
-)
 try:
-    driver.get("http://localhost:5005/loginscreen")
+    driver.get("http://localhost:3000/loginscreen")
     time.sleep(2)
    
     #be on test user U:test PW:test
