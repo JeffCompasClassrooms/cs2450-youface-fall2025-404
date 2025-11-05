@@ -6,7 +6,7 @@ from tinydb import TinyDB
 from db import users, helpers
 
 options = Options()
-#options.add_argument("--headless")  # optional
+options.add_argument("--headless")  # optional
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
