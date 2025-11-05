@@ -13,12 +13,12 @@ options.add_argument("--disable-dev-shm-usage")
 
 # Don't specify chromedriver path!
 driver = webdriver.Chrome(options=options)
-
+ran = 0
+passed = 0
 try:
     driver.get("http://localhost:5005/loginscreen")
     time.sleep(2)
-    ran = 0
-    passed = 0
+   
     #be on test user U:test PW:test
     print("--= Beginning Duck Code Tests =--")
 
