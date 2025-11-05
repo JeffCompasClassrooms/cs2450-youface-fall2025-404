@@ -40,15 +40,14 @@ try:
     else:
         print("[Failed] - Log in failed")
         ran += 1
-    user= driver.find_element(By.CSS_SELECTOR, "h1[id='welcome']").text
-    if user == 'Welcome, test!':
-        print("[PASSED] - Correct user.")
+    welcome= driver.find_element(By.CSS_SELECTOR, "h1[id='welcome']").text
+    if welcome == 'Welcome, test!':
+        print("[PASSED] - Correct user.", str(welcome))
         ran += 1
         passed +=1
     else:
-        print("[FAILED] - Incorrect user. Username was: ", str(user))
+        print("[FAILED] - Incorrect user. Username was: ", str(welcome))
         ran += 1
-
 
 
     #access data for checks
@@ -116,6 +115,9 @@ try:
     ran += 1
     passed +=1 
     enter_code.send_keys('12345')
+    db = helpers.load_db()
+    users = db.table('users')
+    User = tinydb.Query()
     user = users.get(User.username == 'test')
     old_score = user['points']
     enter = driver.find_element(By.CSS_SELECTOR, "button[id='enter']")
