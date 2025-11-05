@@ -16,31 +16,8 @@ driver = webdriver.Chrome(options=options)
 ran = 0
 passed = 0
 
-SELENIUM_REMOTE_URL = os.getenv("SELENIUM_REMOTE_URL", "http://localhost:4444/wd/hub")
-APP_URL = "http://host.docker.internal:5005/loginscreen"
-
-driver = webdriver.Remote(
-    command_executor=SELENIUM_REMOTE_URL,
-    desired_capabilities=DesiredCapabilities.CHROME
-)
-
 try:
-    print(f"Connecting to app at {APP_URL}")
-    for _ in range(10):
-        try:
-            driver.get(APP_URL)
-            break
-        except Exception:
-            time.sleep(2)
-    else:
-        raise Exception("Flask app not reachable.")
-
-    
-
-except Exception as e:
-    print("Error:", e)
-try:
-    driver.get("http://localhost:3000/loginscreen")
+    driver.get("http://localhost:5005/loginscreen")
     time.sleep(2)
    
     #be on test user U:test PW:test
