@@ -105,64 +105,64 @@ try:
 
    
 
+
+
+
+    try:
+        #enter a code
+        enter_code = driver.find_element(By.CSS_SELECTOR, "textarea[name = 'code']")
+        print("[PASSED] - Enter code element exists.")
+        ran += 1
+        passed +=1 
+        enter_code.send_keys('12345')
+        db = helpers.load_db()
+        users = db.table('users')
+        User = tinydb.Query()
+        user = users.get(User.username == 'test')
+        old_score = user['points']
+        enter = driver.find_element(By.CSS_SELECTOR, "button[id='enter']")
+        enter.click()
+        time.sleep(2)
+        user = users.get(User.username == 'test')
+        new_score = user['points']
+        if(new_score == old_score + 100):
+            print('[PASSED] - User score updated correctly.')
+            passed +=1 
+            ran += 1
+        else:
+            print('[FAILED] - User score updated incorrectly.')
+            ran += 1
+        if('Duck1' in user['ducks']):
+            print('[PASSED] - Duck was added to test user.')
+            passed +=1 
+            ran += 1
+        else:
+            print('[FAILED] - Duck failed to add to test user.')
+            ran += 1
+
+
+        #same process but without deleting duck to ensure more points don't get added
+        enter_code = driver.find_element(By.CSS_SELECTOR, "textarea[name = 'code']")
+        enter_code.send_keys('12345')
+        user = users.get(User.username == 'test')
+        old_score = user['points']
+        enter = driver.find_element(By.CSS_SELECTOR, "button[id='enter']")
+        enter.click()
+        time.sleep(2)
+        user = users.get(User.username == 'test')
+        new_score = user['points']
+        if(new_score == old_score):
+            print('[PASSED] - User score did not add if duck was already found.')
+            ran += 1
+            passed +=1 
+        else:
+            print('[FAILED] - User score added score even if the duck was found prior.')
+            ran += 1
+    except NoSuchElementException:
+        print('[FAILED] - Enter code is missing 1 or more elements')
+        ran += 1
 except Exception as e:
     print("Error:", e)
-
-
-try:
-     #enter a code
-    enter_code = driver.find_element(By.CSS_SELECTOR, "textarea[name = 'code']")
-    print("[PASSED] - Enter code element exists.")
-    ran += 1
-    passed +=1 
-    enter_code.send_keys('12345')
-    db = helpers.load_db()
-    users = db.table('users')
-    User = tinydb.Query()
-    user = users.get(User.username == 'test')
-    old_score = user['points']
-    enter = driver.find_element(By.CSS_SELECTOR, "button[id='enter']")
-    enter.click()
-    time.sleep(2)
-    user = users.get(User.username == 'test')
-    new_score = user['points']
-    if(new_score == old_score + 100):
-        print('[PASSED] - User score updated correctly.')
-        passed +=1 
-        ran += 1
-    else:
-        print('[FAILED] - User score updated incorrectly.')
-        ran += 1
-    if('Duck1' in user['ducks']):
-        print('[PASSED] - Duck was added to test user.')
-        passed +=1 
-        ran += 1
-    else:
-        print('[FAILED] - Duck failed to add to test user.')
-        ran += 1
-
-
-    #same process but without deleting duck to ensure more points don't get added
-    enter_code = driver.find_element(By.CSS_SELECTOR, "textarea[name = 'code']")
-    enter_code.send_keys('12345')
-    user = users.get(User.username == 'test')
-    old_score = user['points']
-    enter = driver.find_element(By.CSS_SELECTOR, "button[id='enter']")
-    enter.click()
-    time.sleep(2)
-    user = users.get(User.username == 'test')
-    new_score = user['points']
-    if(new_score == old_score):
-        print('[PASSED] - User score did not add if duck was already found.')
-        ran += 1
-        passed +=1 
-    else:
-        print('[FAILED] - User score added score even if the duck was found prior.')
-        ran += 1
-except NoSuchElementException:
-    print('[FAILED] - Enter code is missing 1 or more elements')
-    ran += 1
-
 finally:
     print("--= Ending Tests =--")
     print(str(ran) + " tests ran. " + str(passed) + ' tests passed.')
