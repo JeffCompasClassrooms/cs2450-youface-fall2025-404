@@ -20,6 +20,7 @@
     {% for u in leaderboard %}
     <div {% if loop.index==1 %} class="leaders no1" {% elif loop.index==2 %} class="leaders no2" {% elif loop.index==3
       %} class="leaders no3" {% endif %}>
+       <img src="{{ url_for('static', filename='badges/' + u.badge) }}" alt="{{ u.name }}'s badge" class="badge-icon">
       <h4>{{ u.name }}</h4>
       {% if loop.index == 1 %}
       <div class="fill1" style="width: {{ (u.score/top_score*100) -10}}%"></div>
@@ -69,6 +70,15 @@
     {% for post in posts %}
     <div class="card bg-light">
       <div class="card-body">
+        {% if post.badge %}
+          <img src="{{ url_for('static', filename='badges/' + post.badge) }}"
+              alt="{{ post.name }}'s badge"
+              class="badge-icon">
+        {% else %}
+          <img src="{{ url_for('static', filename='badges/base_duck.png') }}"
+              alt="Default badge"
+              class="badge-icon">
+        {% endif %}
         <h4 class="card-title">{{ post.user }}</h4>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.time|convert_time }}</h6>
         <p class="card-text">{{ post.text }}</p>
