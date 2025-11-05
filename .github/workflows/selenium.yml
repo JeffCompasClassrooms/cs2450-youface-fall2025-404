@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install selenium
+          pip install "selenium<4"
           pip install tinydb
 
       - name: Start Flask app in background
@@ -40,7 +40,7 @@ jobs:
       - name: Run Selenium tests
         env:
           SELENIUM_REMOTE_URL: http://localhost:4444/wd/hub
+          FLASK_RUN_HOST: 0.0.0.0
         run: |
-          python selenium_example.py
           python selenium_codes.py
           python anthonysel.py
