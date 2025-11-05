@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-md-center mb-4 home">
+
+  <h1 class="badges" id="welcome">Badges</h1>
+
+  {% if badges|length < 1 %} <h2 class="badges">You don't have any badges.</h2>
+    {% else %}
+    <h2 class="badges">You have {{ badges|length }} badges</h2>
+    {% endif %}
+
+    {% for badge in badges %}
+    <div class="card badge-card">
+      <img class="badge-img" src="{{ badge.img }}" alt="Badge Image">
+      <h3>{{ badge.name }}</h3>
+      <p class="badge-value">Value: {{ badge.value }}</p>
+      <p class="badge-description">{{ badge.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="blackbg">
+  <div class="badgesboard">
+    <h2 class="mt-4">Collected Badges</h2>
+    {% for u in badges %}
+    <div class="leaders">
+      <h4>{{ u.name }}</h4>
+      <h4 class="score">{{ u.value }}</h4>
+    </div>
+    {% else %}
+    <h4>No Scores Yet!</h4>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col col-lg-8">
+    <div class="card bg-light mb-3">
+      <div class="card-body">
+        <h3 class="card-title">Badges To Collect</h3>
+
+        <div class="badges-container">
+          {%for badge in badges %}
+          <div class="card-badge-card">
+            <img class="badge-img" src="{{ badge.img }}" alt="Badge Image">
+            <h3>{{ badge.name }}</h3>
+            <p class="badge-value">Value: {{ badge.value }}</p>
+            <p class="badge-description">{{ badge.description }}</p>
+            <p class="badge-requirement">Requirement: {{ badge.requirement }}</p>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

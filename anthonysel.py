@@ -53,6 +53,61 @@ try:
         print("[PASSED] - User created successfully")
     else:
         print("[FAILED] - User creation failed, next test will also fail")
+###check badges page
+    try:
+        toggler = driver.find_element(By.CSS_SELECTOR, ".navbar-toggler")
+        if toggler.is_displayed():
+            toggler.click()
+            time.sleep(0.5)  # give animation time to finish
+    except:
+        pass  # if toggler not found, menu is probably already expanded
+    badges_link = driver.find_element(By.CSS_SELECTOR, "[name='badges']")
+    badges_link.click()
+    time.sleep(1)
+    if "Badges" in driver.page_source:
+        print("[PASSED] - Badges page loaded successfully")
+    else:
+        print("[FAILED] - Badges page failed to load")
+### check for home link
+    try:
+        toggler = driver.find_element(By.CSS_SELECTOR, ".navbar-toggler")
+        if toggler.is_displayed():
+            toggler.click()
+            time.sleep(0.5)  # give animation time to finish
+    except:
+        pass  # if toggler not found, menu is probably already expanded
+    home_link = driver.find_element(By.CSS_SELECTOR, "[name='home']")
+    home_link.click()
+    time.sleep(1)
+    if "GeoCaching Ducks" in driver.page_source:
+        print("[PASSED] - Home link works successfully")
+    else:
+        print("[FAILED] - Home link failed to work")
+### check for friends link
+    try:
+        toggler = driver.find_element(By.CSS_SELECTOR, ".navbar-toggler")
+        if toggler.is_displayed():
+            toggler.click()
+            time.sleep(0.5)  # give animation time to finish
+    except:
+        pass  # if toggler not found, menu is probably already expanded
+    friends_link = driver.find_element(By.CSS_SELECTOR, "[name='friends']")
+    friends_link.click()
+    time.sleep(1)
+    if "Friends" in driver.page_source:
+        print("[PASSED] - Friends page loaded successfully")
+    else:
+        print("[FAILED] - Friends page failed to load")
+### Home link again
+    home_link = driver.find_element(By.CSS_SELECTOR, "[name='home']")
+    home_link.click()
+    time.sleep(1)
+    if "GeoCaching Ducks" in driver.page_source:
+        print("[PASSED] - Home link works successfully")
+    else:
+        print("[FAILED] - Home link failed to work")
+
+
 ### Logout
     time.sleep(1)
     try:

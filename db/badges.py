@@ -1,4 +1,4 @@
-import tinydb
+import tinydb, users
 # we'll have badges earned through points, actions, and ducks found
 
 # #### World Variables ####
