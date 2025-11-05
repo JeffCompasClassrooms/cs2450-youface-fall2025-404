@@ -29,7 +29,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install "selenium<4"
+          pip install "urllib3<1.27"
+          pip install selenium==3.141.0
           pip install tinydb
 
       - name: Start Flask app in background
