@@ -48,6 +48,9 @@ jobs:
             echo "Still waiting... ($i)"
             sleep 2
           done
+          echo "--- Flask log ---"
+          tail -n 20 flask.log
+          
 
       - name: Run Selenium tests
         env:
