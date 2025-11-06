@@ -1,0 +1,210 @@
+{
+    "_default": {},
+    "posts": {
+        "1": {
+            "text": "   ",
+            "time": 1757520083.807036,
+            "user": ""
+        },
+        "10": {
+            "text": "user9 found Duck1!",
+            "time": 1762293956.9130082,
+            "user": "user9"
+        },
+        "11": {
+            "badge": "100pts.png",
+            "text": "user11 found Duck1!",
+            "time": 1762296735.812578,
+            "user": "user11"
+        },
+        "12": {
+            "badge": "100pts.png",
+            "text": "test found Duck1!",
+            "time": 1762376856.1433191,
+            "user": "test"
+        },
+        "13": {
+            "badge": "100pts.png",
+            "text": "test found Duck1!",
+            "time": 1762379969.070598,
+            "user": "test"
+        },
+        "14": {
+            "badge": "100pts.png",
+            "text": "test found Duck1!",
+            "time": 1762452936.887278,
+            "user": "test"
+        },
+        "2": {
+            "text": "asdf",
+            "time": 1757520091.906411,
+            "user": ""
+        },
+        "3": {
+            "text": "hghjvf",
+            "time": 1757521069.4582999,
+            "user": ""
+        },
+        "4": {
+            "text": "ducks",
+            "time": 1759954815.683868,
+            "user": "user1"
+        },
+        "5": {
+            "text": "i found a duck",
+            "time": 1760031396.72451,
+            "user": "user2"
+        },
+        "6": {
+            "text": "user5 found Duck1",
+            "time": 1761322455.150979,
+            "user": "user5"
+        },
+        "7": {
+            "text": "user7 found Duck2",
+            "time": 1761322659.263384,
+            "user": "user7"
+        },
+        "8": {
+            "text": "user4 found Duck2!",
+            "time": 1761507194.180108,
+            "user": "user4"
+        },
+        "9": {
+            "text": "user4 found Duck1!",
+            "time": 1761507290.898643,
+            "user": "user4"
+        }
+    },
+    "users": {
+        "1": {
+            "friends": [
+                ""
+            ],
+            "password": "",
+            "username": ""
+        },
+        "10": {
+            "badges": [
+                "100 points"
+            ],
+            "ducks": [
+                "Duck1"
+            ],
+            "friends": [],
+            "password": "9",
+            "points": 100,
+            "username": "user9"
+        },
+        "11": {
+            "badges": [
+                "100 points"
+            ],
+            "ducks": [
+                "Duck1"
+            ],
+            "friends": [
+                "user5",
+                "user4",
+                "user2"
+            ],
+            "password": "11",
+            "points": 100,
+            "username": "user11"
+        },
+        "2": {
+            "friends": [],
+            "password": "user1",
+            "username": "user1"
+        },
+        "3": {
+            "friends": [
+                "user1"
+            ],
+            "password": "222",
+            "username": "user2"
+        },
+        "4": {
+            "badges": [],
+            "ducks": [
+                "Duck2"
+            ],
+            "friends": [
+                "user1",
+                "user2",
+                "user4",
+                "user7",
+                "user6",
+                "user8",
+                "user5"
+            ],
+            "password": "4",
+            "points": 100,
+            "username": "user4"
+        },
+        "5": {
+            "badges": [
+                "100 points"
+            ],
+            "ducks": [
+                "Duck1",
+                "Duck2"
+            ],
+            "friends": [
+                "user4",
+                "user1",
+                "user7",
+                "user2",
+                "user5"
+            ],
+            "password": "5",
+            "points": 200,
+            "username": "user5"
+        },
+        "6": {
+            "badges": [],
+            "ducks": [
+                "Duck1"
+            ],
+            "friends": [],
+            "password": "6",
+            "points": 100,
+            "username": "user6"
+        },
+        "7": {
+            "badges": [
+                "100 points"
+            ],
+            "ducks": [
+                "Duck1"
+            ],
+            "friends": [],
+            "password": "test",
+            "points": 100,
+            "username": "test"
+        },
+        "8": {
+            "badges": [],
+            "ducks": [
+                "Duck1",
+                "Duck2"
+            ],
+            "friends": [
+                "user5"
+            ],
+            "password": "7",
+            "points": 200,
+            "username": "user7"
+        },
+        "9": {
+            "badges": [],
+            "ducks": [],
+            "friends": [
+                "user2"
+            ],
+            "password": "8",
+            "points": 0,
+            "username": "user8"
+        }
+    }
+}

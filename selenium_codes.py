@@ -23,7 +23,6 @@ try:
     #be on test user U:test PW:test
     print("--= Beginning Duck Code Tests =--")
 
-
     #logged in to right user:
     login_username = driver.find_element(By.CSS_SELECTOR, "input[name = 'username']")
     login_username.send_keys('test')
@@ -131,6 +130,7 @@ try:
             ran += 1
         else:
             print('[FAILED] - User score updated incorrectly.')
+            print(new_score, old_score)
             ran += 1
         if('Duck1' in user['ducks']):
             print('[PASSED] - Duck was added to test user.')
@@ -138,6 +138,7 @@ try:
             ran += 1
         else:
             print('[FAILED] - Duck failed to add to test user.')
+            print(user['ducks'])
             ran += 1
 
 
