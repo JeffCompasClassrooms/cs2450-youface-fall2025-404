@@ -1,3 +1,5 @@
 selenium
 requests
 flask>=2.0
+timeago
+tinydb
