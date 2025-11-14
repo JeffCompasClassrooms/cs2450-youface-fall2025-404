@@ -184,7 +184,9 @@
             "username": "test"
         },
         "8": {
-            "badges": [],
+            "badges": [
+                "100 points"
+            ],
             "ducks": [
                 "Duck1",
                 "Duck2"
