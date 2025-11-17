@@ -4,4 +4,4 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 EXPOSE 5005
-CMD ["python", "youface.py"]
+CMD ["python3", "youface.py"]
