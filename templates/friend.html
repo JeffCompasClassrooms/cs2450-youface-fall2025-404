@@ -10,7 +10,16 @@
 </div>
 <div class="row justify-content-md-center">
   <div class="col col-lg-8">
-    
+    <h2>{{friend}}'s Badges</h2>
+    {% for badge in friend.badges %}
+    <div class="card bg-light">
+      <div class="card-body">
+        <h4 class="card-title">{{ post.user }}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.time|convert_time }}</h6>
+        <p class="card-text">{{ post.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
     <h2>Recent Ducks</h2>
     {% for post in posts %}
     <div class="card bg-light">
@@ -21,6 +30,7 @@
       </div>
     </div>
     {% endfor %}
+
   </div>
 </div>
 {% endblock %}

@@ -21,6 +21,7 @@ def get_leaderboard():
     
 
     sort = sorted(scores, key=lambda item: item['score'], reverse=True)
+    sort[0]['badge'] = "no1.png"
     return sort[:3]
 
 
