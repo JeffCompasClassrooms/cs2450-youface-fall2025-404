@@ -119,13 +119,15 @@ body {
     flex-direction: row;
 
 }
-.badge-icon{
+
+.badge-icon {
     width: 35px;
     height: 35px;
     margin-right: 8px;
     margin-bottom: 8px;
 }
-.leaderboard h2{
+
+.leaderboard h2 {
     margin-bottom: 20px;
 }
 
@@ -275,4 +277,9 @@ body {
     margin-top: 10px;
     font-size: 1em;
     font-style: italic;
+}
+
+.badge-image {
+    width: 100px;
+    height: 100px;
 }

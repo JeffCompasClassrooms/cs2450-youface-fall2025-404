@@ -122,9 +122,9 @@
             "badges": [],
             "ducks": [],
             "friends": [],
-            "password": "",
+            "password": "a",
             "points": 0,
-            "username": "<script>alert(\"hacked\")</script>"
+            "username": "a"
         },
         "2": {
             "friends": [],

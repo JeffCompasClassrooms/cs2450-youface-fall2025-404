@@ -12,7 +12,7 @@
 
     {% for badge in badges %}
     <div class="card badge-card">
-      <img class="badge-img" src="{{ badge.img }}" alt="Badge Image">
+      <img class="badge-img" src="{{ badge.image }}" alt="Badge Image">
       <h3>{{ badge.name }}</h3>
       <p class="badge-value">Value: {{ badge.value }}</p>
       <p class="badge-description">{{ badge.description }}</p>
@@ -43,11 +43,10 @@
         <div class="badges-container">
           {%for badge in badges %}
           <div class="card-badge-card">
-            <img class="badge-img" src="{{ badge.img }}" alt="Badge Image">
+            <img class="badge-img" src="{{ badge.image }}" alt="Badge Image">
             <h3>{{ badge.name }}</h3>
             <p class="badge-value">Value: {{ badge.value }}</p>
             <p class="badge-description">{{ badge.description }}</p>
-            <p class="badge-requirement">Requirement: {{ badge.requirement }}</p>
           </div>
           {% endfor %}
         </div>

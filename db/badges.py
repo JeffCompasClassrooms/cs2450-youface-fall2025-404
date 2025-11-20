@@ -13,8 +13,8 @@ def appendbadges(db, name, value, description, image):
 
 def load_badges():
     db = tinydb.TinyDB("badges.json")
-    if len(db) == 0:
-        appendbadges(db, "100 points", 100, "Earned 100 pts", "100pts.png")
+    if len(db) <= 0:
+        appendbadges(db, "100 points badge", 100, "Earned 100 pts", "100pts.png")
     return db
 
 def add_badge_to_user(user, users):
