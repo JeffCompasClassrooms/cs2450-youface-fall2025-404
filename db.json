@@ -118,6 +118,14 @@
             "points": 100,
             "username": "user11"
         },
+        "12": {
+            "badges": [],
+            "ducks": [],
+            "friends": [],
+            "password": "",
+            "points": 0,
+            "username": "<script>alert(\"hacked\")</script>"
+        },
         "2": {
             "friends": [],
             "password": "user1",
