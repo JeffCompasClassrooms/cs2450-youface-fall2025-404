@@ -1,5 +1,5 @@
 import flask
-
+from . import badges
 from handlers import copy, leaderboard
 from db import posts, users, helpers
 from flask import flash
@@ -65,10 +65,10 @@ def view_friend(fname):
     all_posts = posts.get_posts(db, friend)[::-1] # reverse order
     
     points = users.get_points(friend)
-
+    badges_f = badges.get_all_badges(friend)
     return flask.render_template('friend.html', title=copy.title,
             subtitle=copy.subtitle, user=user, username=username,
-            friend=friend['username'],
+            friend=friend['username'], badges = badges_f,
             friends=users.get_user_friends(db, user), posts=all_posts, points = points)
 @blueprint.route('/friends')
 def friends_page():
