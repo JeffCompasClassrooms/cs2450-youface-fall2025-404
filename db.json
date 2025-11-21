@@ -41,6 +41,12 @@
             "time": 1763142081.774187,
             "user": "user5"
         },
+        "16": {
+            "badge": "100pts.png",
+            "text": "10 found Duck1!",
+            "time": 1763745920.5538712,
+            "user": "10"
+        },
         "2": {
             "text": "asdf",
             "time": 1757520091.906411,
@@ -125,6 +131,21 @@
             "password": "a",
             "points": 0,
             "username": "a"
+        },
+        "13": {
+            "badges": [
+                "100 points"
+            ],
+            "ducks": [
+                "Duck1"
+            ],
+            "friends": [
+                "user1",
+                "user5"
+            ],
+            "password": "10",
+            "points": 100,
+            "username": "10"
         },
         "2": {
             "friends": [],

@@ -11,15 +11,19 @@
 <div class="row justify-content-md-center">
   <div class="col col-lg-8">
     <h2>{{friend}}'s Badges</h2>
-    {% for badge in friend.badges %}
-    <div class="card bg-light">
-      <div class="card-body">
-        <h4 class="card-title">{{ post.user }}</h4>
-        <h6 class="card-subtitle mb-2 text-muted">{{ post.time|convert_time }}</h6>
-        <p class="card-text">{{ post.text }}</p>
-      </div>
-    </div>
-    {% endfor %}
+    {% if badges|length == 0%} <h2 class="badges">{{friend}} doesn't have any badges.</h2>
+    {% else %}
+        {% for badge_list in badges %}
+          {% for badge in badge_list %}
+                  <div class="card badge-card">
+                    <img class="badge-image" src="{{ url_for('static', filename='badges/' ~  badge.image) }}" alt="{{ badge.name }}">
+                    <h3>{{ badge.name }}</h3>
+                    <p class="badge-value">Value: {{ badge.value }}</p>
+                    <p class="badge-description">{{ badge.description }}</p>
+                  </div>
+          {% endfor %}
+        {% endfor %}
+      {% endif %}
     <h2>Recent Ducks</h2>
     {% for post in posts %}
     <div class="card bg-light">

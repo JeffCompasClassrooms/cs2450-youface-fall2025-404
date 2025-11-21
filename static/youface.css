@@ -251,7 +251,7 @@ body {
     margin-top: 20px;
 }
 
-.card-badge-card {
+.badge-card {
     background-color: rgba(0, 0, 0, 0.66) !important;
     padding: 18px;
     border-radius: 50px;
@@ -280,6 +280,8 @@ body {
 }
 
 .badge-image {
-    width: 100px;
-    height: 100px;
+    display: block;
+    margin: 0 auto; 
+    width: 50%;
+    max-width: 200px;
 }

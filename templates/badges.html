@@ -5,22 +5,23 @@
 
   <h1 class="badges" id="welcome">Badges</h1>
 
-  {% if badges|length < 1 %} <h2 class="badges">You don't have any badges.</h2>
-    {% else %}
-    <h2 class="badges">You have {{ badges|length }} badges</h2>
+  {% if user_badges == [] %} <h2 class="badges">You don't have any badges.</h2>
+  {% else %}
+    <h2 class="badges">You have {{ user_badges|length }} badge(s)</h2>
+      {% for badge_list in badges %}
+        {% for badge in badge_list %}
+                <div class="card badge-card">
+                  <img class="badge-image" src="{{ url_for('static', filename='badges/' ~  badge.image) }}" alt="{{ badge.name }}">
+                  <h3>{{ badge.name }}</h3>
+                  <p class="badge-value">Value: {{ badge.value }}</p>
+                  <p class="badge-description">{{ badge.description }}</p>
+                </div>
+        {% endfor %}
+      {% endfor %}
     {% endif %}
-
-    {% for badge in badges %}
-    <div class="card badge-card">
-      <img class="badge-img" src="{{ badge.image }}" alt="Badge Image">
-      <h3>{{ badge.name }}</h3>
-      <p class="badge-value">Value: {{ badge.value }}</p>
-      <p class="badge-description">{{ badge.description }}</p>
-    </div>
-    {% endfor %}
 </div>
 
-<div class="blackbg">
+<!-- <div class="blackbg">
   <div class="badgesboard">
     <h2 class="mt-4">Collected Badges</h2>
     {% for u in badges %}
@@ -32,7 +33,7 @@
     <h4>No Scores Yet!</h4>
     {% endfor %}
   </div>
-</div>
+</div> -->
 
 <div class="row justify-content-md-center">
   <div class="col col-lg-8">
@@ -41,14 +42,18 @@
         <h3 class="card-title">Badges To Collect</h3>
 
         <div class="badges-container">
-          {%for badge in badges %}
-          <div class="card-badge-card">
-            <img class="badge-img" src="{{ badge.image }}" alt="Badge Image">
+          {% if not_earned == [] %} <h2 class="badges">You don't have any badges to earn.</h2>
+          {% else %}
+          
+          {%for badge in not_earned %}
+          <div class="card badge-card">
+            <img src="{{ url_for('static', filename='badges/' ~  badge.image) }}" alt="{{ badge.name }}">
             <h3>{{ badge.name }}</h3>
             <p class="badge-value">Value: {{ badge.value }}</p>
             <p class="badge-description">{{ badge.description }}</p>
           </div>
           {% endfor %}
+          {% endif %}
         </div>
 
       </div>
