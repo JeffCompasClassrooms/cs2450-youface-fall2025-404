@@ -126,6 +126,27 @@
             "points": 0,
             "username": "a"
         },
+        "13": {
+            "badges": [
+                "100 points",
+                "Login for the first time"
+            ],
+            "ducks": [],
+            "friends": [],
+            "password": "a1",
+            "points": 0,
+            "username": "a1"
+        },
+        "14": {
+            "badges": [
+                "Login for the first time"
+            ],
+            "ducks": [],
+            "friends": [],
+            "password": "a1",
+            "points": 0,
+            "username": "a2"
+        },
         "2": {
             "friends": [],
             "password": "user1",

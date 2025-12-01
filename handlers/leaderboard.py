@@ -16,7 +16,7 @@ def get_leaderboard():
         if not badge:
             top_badge = "base_duck.png"
         else:
-            top_badge = badges.get_badge_png_by_name(badge[-1])
+            top_badge = badge[-1]["image"]
         scores.append({'name': name, 'score': points, "badge": top_badge})
     
 
@@ -28,6 +28,13 @@ def get_leaderboard():
 
 def get_user_badge(user):
     badge_db = badges.load_badges()
-    all_badges = user.get('badges', [])
-    return all_badges
-   
+    user_badge_names = user.get('badges', [])
+    full_badges = []
+    for name in user_badge_names:
+        Badge = tinydb.Query()
+        result = badge_db.search(Badge.name == name)
+        if result:
+            full_badges.append(result[0])  # append full badge object
+
+    print("FULL BADGES RETURNED:", full_badges)
+    return full_badges
