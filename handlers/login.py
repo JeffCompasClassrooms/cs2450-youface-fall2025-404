@@ -1,9 +1,22 @@
-import flask
+import flask, tinydb
 
 from handlers import copy, leaderboard
-from db import posts, users, helpers
+from db import posts, users, helpers, badges
 
 blueprint = flask.Blueprint("login", __name__)
+def award_login_badge(user, users_table):
+    login_badge_name = "Login for the first time"
+    print(f"[AWARD_BADGE] Checking if user has '{login_badge_name}' badge...")
+    if login_badge_name not in user.get('badges', []):
+        if 'badges' not in user:
+            user['badges'] = []
+        user['badges'].append(login_badge_name)
+        User = tinydb.Query()
+        users_table.update({'badges': user['badges']}, User.username == user['username'])
+        print(f"[AWARD_BADGE] Awarded login badge to {user['username']}. Current badges: {user['badges']}")
+    else:
+        print(f"[AWARD_BADGE] User already has the badge. No changes made.")
+
 
 @blueprint.route('/loginscreen')
 def loginscreen():
@@ -31,13 +44,22 @@ def login():
     log in a user, based on what button they click.
     """
     db = helpers.load_db()
+    users_table = db.table('users')  # TinyDB users table
+
 
     username = flask.request.form.get('username')
     password = flask.request.form.get('password')
+    print(f"[LOGIN] Attempting login for user: {username}")
+
 
     resp = flask.make_response(flask.redirect(flask.url_for('login.index')))
     resp.set_cookie('username', username)
     resp.set_cookie('password', password)
+    user = users.get_user(db, username, password)
+    print(f"[LOGIN] Fetched user from DB: {user}")
+    if user:
+        award_login_badge(user, users_table)
+
 
     submit = flask.request.form.get('type')
     if submit == 'Create':
@@ -47,12 +69,18 @@ def login():
             flask.flash('Username {} already taken!'.format(username), 'danger')
             return flask.redirect(flask.url_for('login.loginscreen'))
         flask.flash('User {} created successfully!'.format(username), 'success')
+        print(f"[CREATE] User created: {username}")
+        user = users.get_user(db, username, password)
+        print(f"[CREATE] Fetching new user for badge check: {user}")
+        award_login_badge(user, users_table)
+
     elif submit == 'Delete':
         if users.delete_user(db, username, password):
             resp.set_cookie('username', '', expires=0)
             resp.set_cookie('password', '', expires=0)
             flask.flash('User {} deleted successfully!'.format(username), 'success')
-
+    user_after = users.get_user(db, username, password)
+    print(f"[LOGIN] User badges after login: {user_after.get('badges', [])}")
     return resp
 
 @blueprint.route('/logout', methods=['POST'])
@@ -73,12 +101,16 @@ def index():
     # make sure the user is logged in
     username = flask.request.cookies.get('username')
     password = flask.request.cookies.get('password')
-    if username is None and password is None:
+    if username is None or password is None:
         return flask.redirect(flask.url_for('login.loginscreen'))
+
     user = users.get_user(db, username, password)
     if not user:
         flask.flash('Invalid credentials. Please try again.', 'danger')
         return flask.redirect(flask.url_for('login.loginscreen'))
+
+    users_table = db.table('users')
+    award_login_badge(user, users_table)
 
     # get the info for the user's feed
     friends = users.get_user_friends(db, user)

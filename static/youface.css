@@ -81,6 +81,8 @@ body {
     padding: 18px;
     border-radius: 50px;
     margin-bottom: 10px;
+    border: 1px solid rgb(27, 214, 152);
+    /* width + style + color */
     border-color: rgb(27, 214, 152);
 
 }
@@ -252,34 +254,38 @@ body {
 }
 
 .card-badge-card {
-    background-color: rgba(0, 0, 0, 0.66) !important;
+    background-color: rgba(0, 0, 0, 0.66);
     padding: 18px;
     border-radius: 50px;
     margin-bottom: 10px;
-    border-color: rgb(27, 214, 152);
+    border: 2px solid rgb(27, 214, 152);
     text-align: center;
     margin-top: 20px;
+    width: 250px;
+    /* fixed width for consistency */
+    align-items: center;
+}
+
+.badge-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .badge-value {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     color: rgb(110, 170, 255);
     margin-top: 10px;
 }
 
 .badge-description {
-    margin-top: 10px;
-    font-size: 1.1em;
-}
-
-.badge-requirement {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 1em;
-    font-style: italic;
 }
 
-.badge-image {
-    width: 100px;
-    height: 100px;
+.badgesboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
